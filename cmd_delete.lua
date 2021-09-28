@@ -38,8 +38,10 @@ h.registered_commands[cname] = function(player, parameter)
         h.events[ename].Msg = nil
         h.events[ename] = nil
 
-        minetest.log(player .. " has deleted the Timer " .. ename .. " with the Time " ..
+        minetest.log("action", player .. " has deleted the Timer " .. ename .. " with the Time " ..
                      ttime .. " and the Message " .. tMsg)
+        h.storage:from_table({fields=h.events})
+        
     else
         h.print(player, h.color["orange"] .. "Timer " .. h.color["yellow"] .. ename ..
                         h.color["orange"] .. " not found!")

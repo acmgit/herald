@@ -127,5 +127,6 @@ end
 
 function lib.show_version()
     print("[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded. \n")
-
+    minetest.log("ACTION","[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded.")
+    
 end -- lib.show_version

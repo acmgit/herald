@@ -17,10 +17,10 @@ h.register_help({
 
 h.registered_commands[cname] = function(player, parameter)
     local entry = ""
-    h.print(player, S("List of all Timers:"))
+    h.print(player, h.color["green"] .. S("List of all Timers:"))
 
     for k,v in pairs(h.events) do
-        entry = "Name: " .. k .. " Time: " .. v.Time .. " Message: " .. v.color .. v.Msg
+        entry = h.color["orange"] .. "Name: " .. h.color["yellow"] .. k .. h.color["orange"] .. " Time: " .. h.color["yellow"] .. v.Time .. h.color["orange"] .. " Message: " .. v.color .. v.Msg
         h.print(player, entry)
     end
 

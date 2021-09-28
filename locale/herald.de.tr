@@ -51,12 +51,12 @@ found.=gefunden.
 
 ### cmd_list.lua ###
 
-List of all Timers:=Zeigt alle Timer
+List of all Timers:=Zeigt alle Timer:
 Lists all stored Timer.=Zeigt alle gespeicherten Timer.
 
 ### cmd_set.lua ###
 
- has set a new Timer with the Name = legte einen neuen Timer an Namens
+ has set a new Timer with the Name = legte einen neuen Timer an Namens 
 
 Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>.=Setzt einen neuen Timer mit dem Namen <Name> auf <Zeit> und schreibt die <Nachricht> in dieser <Farbe>.
 

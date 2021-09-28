@@ -43,12 +43,9 @@ dofile(H.modpath .. "/cmd_delete.lua")
 dofile(H.modpath .. "/cmd_set.lua")
 dofile(H.modpath .. "/cmd_change.lua")
 
-H.events = {
-                    ["test5"] = {Time = "02:49", color=H.color["green"], Msg = "Test-Event ..."},
-                    ["test3"] = {Time = "02:49", color=H.color["yellow"], Msg = "Test-Event 2 ..."},
-                    ["test7"] = {Time = "02:50", color=H.color["red"], Msg = "Test-Event 3 ....."},
-                    ["test1"] = {Time = "02:49", color=H.color["yellow"], Msg = "Test-Event 2 ..."},
-                }
+H.storage = minetest.get_mod_storage()
+local load = H.storage:to_table()
+H.events = load.fields
 
 minetest.register_privilege("Herald", S("Manages the Announce-Timer."))
 

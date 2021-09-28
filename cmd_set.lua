@@ -56,7 +56,8 @@ h.registered_commands[cname] = function(player, parameter)
     h.print_all(h.color["orange"] .. player .. h.color["green"] .. S(" has set a new Timer with the Name ") ..
                 h.color["orange"] .. ename .. h.color["green"] .. ".")
     h.events[ename] = {Time = etime, color = ecolor, Msg = emsg}
-    minetest.log(player .. " has set a new Timer " .. ename .. " to Time " .. etime .. " and the Message " .. emsg)
+    minetest.log("action", player .. " has set a new Timer " .. ename .. " to Time " .. etime .. " and the Message " .. emsg)
+    h.storage:from_table({fields=h.events})
 
 end -- h["set"
 
