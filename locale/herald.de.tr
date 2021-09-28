@@ -1,0 +1,75 @@
+# textdomain: herald
+
+
+### cmd_change.lua ###
+
+ has changed the Timer with the Name = veränderte den Timer Namens 
+
+Changes the Timer with the <Name>at <Time> and writes the <Message> in this <Color>.= Verändert den Timer mit dem <Name> auf <Zeit> und schreibt die <Nachricht> in dieser Farbe <Farbe>.
+
+There is no Timer with the name = Es gibt keinen Timer mit dem Namen 
+
+### cmd_change.lua ###
+### cmd_delete.lua ###
+### cmd_set.lua ###
+
+You are not an Herald to do this. Missing privileg Herald.=Du bist kein Herold um das zu tun. Fehlendes Privileg Herald.
+
+### cmd_change.lua ###
+### cmd_set.lua ###
+
+<Name> <Time> <Color> <Message>=<Name> <Zeit> <Farbe> <Nachricht>
+No Color for the Message given.=Keine Farbe für die Nachricht angegeben.
+No Message for the timer given.=Keine Nachricht für den Timer angegeben.
+No Name for the timer given.=Keinen Namen für den Timer angegeben.
+No Time for the timer given.=Keine Zeit für den Timer angegeben.
+
+### cmd_colorlist.lua ###
+
+List of all Heraldcolors:=Liste der Heraldfarben:
+Lists all available Colors.=Zeigt alle verfügbaren Farben.
+
+### cmd_delete.lua ###
+
+Deletes the Timer called <name>.=Löscht den Timer namens <Name>.
+
+### cmd_help.lua ###
+
+<command>=<Kommando>
+Commands for =Kommanden für
+Description: =Beschreibung:
+Helpsystem for =Hilfssystem für 
+Name: =Name: 
+No entry in help for command=Kein Eintrag in der Hilfe für das Kommando
+Parameter: =Parameter: 
+Shortcut: =Kürzel
+Shows you the entire help for =Zeigt dir die gesamte Hilfe für 
+Shows you the help for =Zeigt dir die Hilfe für
+Usage: =Benutzung:
+command=Kommando
+found.=gefunden.
+
+### cmd_list.lua ###
+
+List of all Timers:=Zeigt alle Timer
+Lists all stored Timer.=Zeigt alle gespeicherten Timer.
+
+### cmd_set.lua ###
+
+ has set a new Timer with the Name = legte einen neuen Timer an Namens
+
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>.=Setzt einen neuen Timer mit dem Namen <Name> auf <Zeit> und schreibt die <Nachricht> in dieser <Farbe>.
+
+Take care, the Timername exists !!=Vorsicht, den Timernamen gibts schon.
+
+### init.lua ###
+
+Manages the Announce-Timer.=Verwaltet die Ankündigungs-Timer.
+
+### lib.lua ###
+
+ given.= gegeben.
+No Command for =Kein Kommando für
+Try /her help.=Versuche /her help
+Unknown Command=Unbekanntes Kommando
+Unknown Command. No helpsystem available.=Unbekanntes Kommando. Kein Hilfssystem verfügbar.

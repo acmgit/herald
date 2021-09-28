@@ -1,0 +1,75 @@
+# textdomain: herald
+
+
+### cmd_change.lua ###
+
+ has changed the Timer with the Name =
+
+Changes the Timer with the <Name>at <Time> and writes the <Message> in this <Color>.=
+
+There is no Timer with the name =
+
+### cmd_change.lua ###
+### cmd_delete.lua ###
+### cmd_set.lua ###
+
+You are not an Herald to do this. Missing privileg Herald.=
+
+### cmd_change.lua ###
+### cmd_set.lua ###
+
+<Name> <Time> <Color> <Message>=
+No Color for the Message given.=
+No Message for the timer given.=
+No Name for the timer given.=
+No Time for the timer given.=
+
+### cmd_colorlist.lua ###
+
+List of all Heraldcolors:=
+Lists all available Colors.=
+
+### cmd_delete.lua ###
+
+Deletes the Timer called <name>.=
+
+### cmd_help.lua ###
+
+<command>=
+Commands for =
+Description: =
+Helpsystem for =
+Name: =
+No entry in help for command=
+Parameter: =
+Shortcut: =
+Shows you the entire help for =
+Shows you the help for =
+Usage: =
+command=
+found.=
+
+### cmd_list.lua ###
+
+List of all Timers:=
+Lists all stored Timer.=
+
+### cmd_set.lua ###
+
+ has set a new Timer with the Name =
+
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>.=
+
+Take care, the Timername exists !!=
+
+### init.lua ###
+
+Manages the Announce-Timer.=
+
+### lib.lua ###
+
+ given.=
+No Command for =
+Try /her help.=
+Unknown Command=
+Unknown Command. No helpsystem available.=
