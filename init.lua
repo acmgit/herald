@@ -36,7 +36,6 @@ if(minetest.get_translator ~= nil) then
 end
 
 H.scm = false -- Smart-Chat-Mode
-
 if(minetest.get_modpath("smart_chat")) then
    H.scm = true
 end

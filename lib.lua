@@ -116,7 +116,7 @@ end -- function print(
 function lib.print_all(player, text)
     if(lib.scm) then                        -- Smart_Chat is there
         local sc = smart_chat
-        sc.print_all(player, text)
+        sc.chat(player, text)
 
     else                                    -- Vanilla print all
     local lprint = minetest.chat_send_all
