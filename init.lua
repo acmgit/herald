@@ -49,8 +49,7 @@ dofile(H.modpath .. "/cmd_set.lua")
 dofile(H.modpath .. "/cmd_change.lua")
 
 H.storage = minetest.get_mod_storage()
-local load = H.storage:to_table()
-H.events = load.fields
+H.Load_Timer()
 
 minetest.register_privilege("Herald", S("Manages the Announce-Timer."))
 

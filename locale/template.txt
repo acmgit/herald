@@ -4,9 +4,11 @@
 ### cmd_change.lua ###
 
  has changed the Timer with the Name =
+<Name> <Time> <Color> <Message>=
 
 Changes the Timer with the <Name>at <Time> and writes the <Message> in this <Color>.=
 
+No Typ for the timer given.=
 There is no Timer with the name =
 
 ### cmd_change.lua ###
@@ -18,7 +20,6 @@ You are not an Herald to do this. Missing privileg Herald.=
 ### cmd_change.lua ###
 ### cmd_set.lua ###
 
-<Name> <Time> <Color> <Message>=
 No Color for the Message given.=
 No Message for the timer given.=
 No Name for the timer given.=
@@ -57,8 +58,10 @@ Lists all stored Timer.=
 ### cmd_set.lua ###
 
  has set a new Timer with the Name =
+<Name> <Time> <Color> <Once> <Message>=
+Missing Timertyp. (Once, Perm)=
 
-Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>.=
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, true, it fires only one time=
 
 Take care, the Timername exists !!=
 

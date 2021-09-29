@@ -38,10 +38,10 @@ h.registered_commands[cname] = function(player, parameter)
         end
 
     end -- for i,v
-    
+
     etyp = string.lower(etyp)
     etyp = string.sub(etyp, 1,1)
-    
+
     if(etyp ~= "o") then etyp = "p" end                -- Check if Typ is once, else it's permanent
 
     if(ename == nil) then h.print(player, h.color["orange"] .. S("No Name for the timer given.")) return end
@@ -65,7 +65,7 @@ h.registered_commands[cname] = function(player, parameter)
     h.print_all(player, h.color["orange"] .. player .. h.color["green"] .. S(" has changed the Timer with the Name ") ..
                 h.color["orange"] .. ename .. h.color["green"] .. ".")
     h.events[ename] = {Time = etime, Color = ecolor, Typ = etyp, Msg = emsg}
-    h.storage:from_table({fields=h.events})
+    h.Save_Timer()
     minetest.log("action",player .. " has changed the Timer " .. ename .. " to Time " ..
                  etime .. ", Typ " .. etyp .. " and the Message " .. emsg)
 

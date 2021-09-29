@@ -44,7 +44,8 @@ h.registered_commands[cname] = function(player, parameter)
 
         minetest.log("action", player .. " has deleted the Timer " .. ename .. " with the Time " ..
                      ttime .. ", Typ " ..  ttyp .. " and the Message " .. tMsg)
-        h.storage:from_table({fields=h.events})
+
+        h.Save_Timer()
 
     else
         h.print(player, h.color["orange"] .. "Timer " .. h.color["yellow"] .. ename ..

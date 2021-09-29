@@ -4,9 +4,11 @@
 ### cmd_change.lua ###
 
  has changed the Timer with the Name = veränderte den Timer Namens 
+<Name> <Time> <Color> <Message>=<Name> <Zeit> <Farbe> <Nachricht>
 
 Changes the Timer with the <Name>at <Time> and writes the <Message> in this <Color>.= Verändert den Timer mit dem <Name> auf <Zeit> und schreibt die <Nachricht> in dieser Farbe <Farbe>.
 
+No Typ for the timer given.= Kein Typ für den Timer angegeben.
 There is no Timer with the name = Es gibt keinen Timer mit dem Namen 
 
 ### cmd_change.lua ###
@@ -18,7 +20,6 @@ You are not an Herald to do this. Missing privileg Herald.=Du bist kein Herold u
 ### cmd_change.lua ###
 ### cmd_set.lua ###
 
-<Name> <Time> <Color> <Message>=<Name> <Zeit> <Farbe> <Nachricht>
 No Color for the Message given.=Keine Farbe für die Nachricht angegeben.
 No Message for the timer given.=Keine Nachricht für den Timer angegeben.
 No Name for the timer given.=Keinen Namen für den Timer angegeben.
@@ -57,8 +58,10 @@ Lists all stored Timer.=Zeigt alle gespeicherten Timer.
 ### cmd_set.lua ###
 
  has set a new Timer with the Name = legte einen neuen Timer an Namens 
+<Name> <Time> <Color> <Once> <Message>=<Name> <Zeit> <Farbe> <Einzeln> <Nachricht>
+Missing Timertyp. (Once, Perm)=Fehlender Timertyp (o - Einzeln, p - ermanent)
 
-Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>.=Setzt einen neuen Timer mit dem Namen <Name> auf <Zeit> und schreibt die <Nachricht> in dieser <Farbe>.
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, true, it fires only one time=Setzt einen neuen Timer mit dem <Name> um <Zeit> und schreibt die <Nachricht> in dieser <Farbe>. <o - Einzeln> ist der Typ des Timers, ist es wahr, löst es nur einmal aus.
 
 Take care, the Timername exists !!=Vorsicht, den Timernamen gibts schon.
 
