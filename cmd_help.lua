@@ -8,6 +8,7 @@ if(not activate) then return end
 local green = lib.color["green"]
 local yellow = lib.color["yellow"]
 local orange = lib.color["orange"]
+local red = lib.color["red"]
 
 lib.register_help({
                             Name = cname,
@@ -53,8 +54,8 @@ lib.registered_commands[cname] = function(player, parameter)
                             lib.helpsystem[parameter[2]].Shortcut)
 
         else
-            lib.print(player, lib.red .. S("No entry in help for command") .. " <" ..
-                            orange .. parameter[2] .. lib.red .. "> " .. S("found" .. "."))
+            lib.print(player, red .. S("No entry in help for command") .. " <" ..
+                            orange .. parameter[2] .. red .. "> " .. S("found" .. "."))
 
         end -- if(lib.help[parameter[2
 

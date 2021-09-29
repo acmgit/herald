@@ -113,10 +113,18 @@ function lib.print(player, text)
 
 end -- function print(
 
-function lib.print_all(text)
+function lib.print_all(player, text)
+    if(lib.scm) then                        -- Smart_Chat is there
+        local sc = smart_chat
+        sc.print_all(player, text)
+
+    else                                    -- Vanilla print all
     local lprint = minetest.chat_send_all
-    lprint(text)
-end
+    lprint(lib.color["yellow"] .. player .. ":" .. text)
+
+    end
+
+end -- function print_all(
 
 
 --[[
@@ -128,5 +136,5 @@ end
 function lib.show_version()
     print("[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded. \n")
     minetest.log("ACTION","[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded.")
-    
+
 end -- lib.show_version

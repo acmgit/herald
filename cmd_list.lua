@@ -20,15 +20,18 @@ h.registered_commands[cname] = function(player, parameter)
     h.print(player, h.color["green"] .. S("List of all Timers:"))
 
     for k,v in pairs(h.events) do
-        entry = h.color["orange"] .. "Name: " .. h.color["yellow"] .. k .. h.color["orange"] .. " Time: " .. h.color["yellow"] .. v.Time .. h.color["orange"] .. " Message: " .. v.color .. v.Msg
+        entry = h.color["orange"] .. "Name: " .. h.color["yellow"] .. k ..
+                h.color["orange"] .. " Time: " .. h.color["yellow"] .. v.Time ..
+                h.color["orange"] .. " Typ: " .. h.color["yellow"] .. v.Typ ..
+                h.color["orange"] .. " Message: " .. h.color["yellow"] .. v.Color .. v.Msg
         h.print(player, entry)
-    end
 
+    end -- for k,v in
 
-end -- sc["list"
+end -- function h.registerd_commands["list"
 
 h.registered_commands[short] = function(player, parameter)
 
         h.registered_commands[cname](player, parameter)
 
-end -- sc["l"
+end -- h.registered_commands["l"

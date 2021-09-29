@@ -27,21 +27,25 @@ h.registered_commands[cname] = function(player, parameter)
 
     if(h.events[ename]) then
         local ttime = h.events[ename].Time
-        local tcol = h.events[ename].color
+        local tcol = h.events[ename].Color
+        local ttyp = h.events[ename].Typ
         local tMsg = h.events[ename].Msg
-        h.print_all(h.color["orange"] .. player .. h.color["yellow"] .. " deletes the Timer " ..
-                    h.color["orange"] .. ename  .. h.color["yellow"] .. " Time: " ..
-                    h.color["orange"] .. ttime .. h.color["yellow"] .. " Msg: " .. tcol .. tMsg)
+
+        h.print_all(player, h.color["orange"] .. player .. h.color["yellow"] .. " deletes the Timer " ..
+                            h.color["orange"] .. ename  .. h.color["yellow"] .. " Time: " ..
+                            h.color["orange"] .. ttime .. h.color["yellow"] .. " Typ: " ..
+                            h.color["orange"] .. ttyp .. h.color["yellow"] .. " Msg: " ..tcol .. tMsg)
 
         h.events[ename].Time = nil
-        h.events[ename].color = nil
+        h.events[ename].Color = nil
         h.events[ename].Msg = nil
+        h.events[ename].Typ = nil
         h.events[ename] = nil
 
         minetest.log("action", player .. " has deleted the Timer " .. ename .. " with the Time " ..
-                     ttime .. " and the Message " .. tMsg)
+                     ttime .. ", Typ " ..  ttyp .. " and the Message " .. tMsg)
         h.storage:from_table({fields=h.events})
-        
+
     else
         h.print(player, h.color["orange"] .. "Timer " .. h.color["yellow"] .. ename ..
                         h.color["orange"] .. " not found!")

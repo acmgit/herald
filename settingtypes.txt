@@ -1,20 +1,20 @@
 #Command help
-smart_chat.cmd_help (Enable Help) bool true
+herald.cmd_help (Enable Help) bool true
 
 #Command list
-smart_chat.cmd_list (Enable list) bool true
+herald.cmd_list (Enable list) bool true
 
 #Command colorlist
-smart_chat.cmd_colorlist (Enable list) bool true
+herald.cmd_colorlist (Enable list) bool true
 
 #Command change
-smart_chat.cmd_change (Enable list) bool true
+herald.cmd_change (Enable list) bool true
 
 #Command set
-smart_chat.cmd_set (Enable list) bool true
+herald.cmd_set (Enable list) bool true
 
 #Command delete
-smart_chat.cmd_delete (Enable list) bool true
+herald.cmd_delete (Enable list) bool true
 
 #Command change
-smart_chat.cmd_change (Enable list) bool true
+herald.cmd_change (Enable list) bool true

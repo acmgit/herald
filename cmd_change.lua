@@ -27,11 +27,12 @@ h.registered_commands[cname] = function(player, parameter)
 
     local ename = parameter[2]
     local etime = parameter[3]
-    local ecolor = h.color[parameter[4]]
+    local etyp = parameter[4]
+    local ecolor = h.color[parameter[5]]
     local emsg = ""
 
     for i,v in pairs(parameter) do
-        if i >= 5 then
+        if i >= 6 then
             emsg = emsg .. v .. " "
 
         end
@@ -41,6 +42,7 @@ h.registered_commands[cname] = function(player, parameter)
 
     if(ename == nil) then h.print(player, h.color["orange"] .. S("No Name for the timer given.")) return end
     if(etime == nil) then h.print(player, h.color["orange"] .. S("No Time for the timer given.")) return end
+    if(etyp == nil) then h.print(player, h.color["orange"] .. S("No Typ for the timer given.")) return end
     if(ecolor == nil) then h.print(player, h.color["orange"] .. S("No Color for the Message given.")) return end
     if(emsg == nil) then h.print(player, h.color["orange"] .. S("No Message for the timer given.")) return end
 
@@ -56,11 +58,12 @@ h.registered_commands[cname] = function(player, parameter)
     if(not exist) then h.print(player, h.color["orange"] .. S("There is no Timer with the name ") ..
                                h.color["yellow"] .. ename .. h.color["orange"] .. ".") return end
 
-    h.print_all(h.color["orange"] .. player .. h.color["green"] .. S(" has changed the Timer with the Name ") ..
+    h.print_all(player, h.color["orange"] .. player .. h.color["green"] .. S(" has changed the Timer with the Name ") ..
                 h.color["orange"] .. ename .. h.color["green"] .. ".")
-    h.events[ename] = {Time = etime, color = ecolor, Msg = emsg}
+    h.events[ename] = {Time = etime, Color = ecolor, Typ = etyp, Msg = emsg}
     h.storage:from_table({fields=h.events})
-    minetest.log("action",player .. " has changed the Timer " .. ename .. " to Time " .. etime .. " and the Message " .. emsg)
+    minetest.log("action",player .. " has changed the Timer " .. ename .. " to Time " ..
+                 etime .. ", Typ " .. etyp .. " and the Message " .. emsg)
 
 end -- h["set"
 

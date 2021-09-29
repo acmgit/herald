@@ -35,6 +35,12 @@ if(minetest.get_translator ~= nil) then
     H.S = S
 end
 
+H.scm = false -- Smart-Chat-Mode
+
+if(minetest.get_modpath("smart_chat")) then
+   H.scm = true
+end
+
 dofile(H.modpath .. "/lib.lua")
 dofile(H.modpath .. "/cmd_help.lua")
 dofile(H.modpath .. "/cmd_list.lua")
@@ -69,15 +75,23 @@ minetest.register_chatcommand("her",{
 }) -- minetest.register_chatcommand
 
 function H.Update()
-    local HTime = os.date("%H:%M")
-    H.time = HTime
-    local HEvent = H.events
+    H.time = os.date("%H:%M")                       -- Update the Time
 
-    for k,v in pairs(HEvent) do
-        if(v.Time == HTime) then
-            H.print_all(v.color .. v.Msg)
-        end
-    end
+    for k,v in pairs(H.events) do                   -- check the events
+        if(v.Time == H.time) then                   -- Fire the Event
+            H.print_all("Server"," " .. v.Color .. v.Msg) -- Server is the player
+            if(v.Typ:lower()) == "once" then        -- Timer fires only one time
+                H.events[v.Time] = nil
+                H.events[v.Color] = nil
+                H.events[v.Typ] = nil
+                H.events[v.Msg] = nil
+                H.events[k] = nil
+                H.storage:from_table({fields=H.events})  -- Store the new Table
+            end -- if(v.once
+
+        end -- if (v.Time
+
+    end -- for k,v
 
 end -- function Update ()
 
