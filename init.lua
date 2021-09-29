@@ -75,19 +75,20 @@ minetest.register_chatcommand("her",{
 }) -- minetest.register_chatcommand
 
 function H.Update()
-    H.time = os.date("%H:%M")                       -- Update the Time
+    H.time = os.date("%H:%M")                             -- Update the Time
 
-    for k,v in pairs(H.events) do                   -- check the events
-        if(v.Time == H.time) then                   -- Fire the Event
+    for k,v in pairs(H.events) do                         -- check the events
+        if(v.Time == H.time) then                         -- Fire the Event
             H.print_all("Server"," " .. v.Color .. v.Msg) -- Server is the player
-            if(v.Typ:lower()) == "once" then        -- Timer fires only one time
+            
+            if(v.Typ:lower()) == "o" then                 -- Timer fires only one time
                 H.events[v.Time] = nil
                 H.events[v.Color] = nil
                 H.events[v.Typ] = nil
                 H.events[v.Msg] = nil
                 H.events[k] = nil
-                H.storage:from_table({fields=H.events})  -- Store the new Table
-            end -- if(v.once
+                H.storage:from_table({fields=H.events})   -- Store the new Table
+            end -- if(v.Type
 
         end -- if (v.Time
 
