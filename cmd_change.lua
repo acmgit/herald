@@ -25,6 +25,8 @@ h.registered_commands[cname] = function(player, parameter)
 
     end -- if(not priv
 
+    if(h.events == nil) then h.print(player, h.color["orange"] .. S("No timer stored.")) return end
+
     local ename = parameter[2]
     local etime = parameter[3]
     local etyp = parameter[4]

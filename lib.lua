@@ -134,9 +134,10 @@ end -- function print_all(
 ]]--
 
 function lib.Load_Timer()
-    local load = lib.storage:to_table()
-    lib.events = load.fields
-    
+    local load = lib.storage:get_string("data")
+    lib.events = minetest.deserialize(load)
+    if(lib.events == nil) then lib.events = {} end
+
 end -- load_Timer
 
 --[[
@@ -146,7 +147,8 @@ end -- load_Timer
 ]]--
 
 function lib.Save_Timer()
-    lib.storage:from_table({fields=lib.events})
+    local save = minetest.serialize(lib.events)
+    lib.storage:set_string("data", save)
 
 end
 

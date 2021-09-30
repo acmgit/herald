@@ -52,14 +52,17 @@ h.registered_commands[cname] = function(player, parameter)
     if(etyp == nil) then h.print(player, h.color["orange"] .. S("Missing Timertyp. (Once, Perm)")) return end
     if(emsg == nil) then h.print(player, h.color["orange"] .. S("No Message for the timer given.")) return end
 
-    for i,v in pairs(h.events) do
-        if(i == ename) then
-            h.print(player, h.color["orange"] .. S("Take care, the Timername exists !!"))
-            return
+    if(h.events ~= nil) then
+        for i,v in pairs(h.events) do
+            if(i == ename) then
+                h.print(player, h.color["orange"] .. S("Take care, the Timername exists !!"))
+                return
 
-        end
+            end -- if(i == ename
 
-    end
+        end -- for i,v in
+
+    end -- if(h.events
 
     h.print_all(player, h.color["orange"] .. player .. h.color["green"] .. S(" has set a new Timer with the Name ") ..
                 h.color["orange"] .. ename .. h.color["green"] .. ".")

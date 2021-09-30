@@ -18,6 +18,7 @@ h.register_help({
 h.registered_commands[cname] = function(player, parameter)
     local entry = ""
     h.print(player, h.color["green"] .. S("List of all Timers:"))
+    if(h.events == nil) then return end
 
     for k,v in pairs(h.events) do
         entry = h.color["orange"] .. "Name: " .. h.color["yellow"] .. k ..
