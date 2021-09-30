@@ -70,6 +70,11 @@ Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Co
 
 Take care, the Timername exists !!=Vorsicht, den Timernamen gibts schon.
 
+### cmd_time.lua ###
+
+Show's you the current Time of Herald.=Zeigt dir die aktuellle Zeit von Herald.
+The current Time is =Die aktuelle Zeit ist 
+
 ### init.lua ###
 
 Manages the Announce-Timer.=Verwaltet die Ankündigungs-Timer.

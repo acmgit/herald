@@ -47,6 +47,7 @@ dofile(H.modpath .. "/cmd_colorlist.lua")
 dofile(H.modpath .. "/cmd_delete.lua")
 dofile(H.modpath .. "/cmd_set.lua")
 dofile(H.modpath .. "/cmd_change.lua")
+dofile(H.modpath .. "/cmd_status.lua")
 
 H.storage = minetest.get_mod_storage()
 H.Load_Timer()
@@ -80,7 +81,8 @@ function H.Update()
     for k,v in pairs(H.events) do                         -- check the events
         if(v.Time == H.time) then                         -- Fire the Event
             H.print_all("Server"," " .. v.Color .. v.Msg) -- Server is the player
-
+            minetest.log("action", "Timer: " .. k .. " has fired with: " .. v.Msg)
+            
             if(v.Typ:lower()) == "o" then                 -- Timer fires only one time
                 H.events[v.Time] = nil
                 H.events[v.Color] = nil
@@ -88,7 +90,7 @@ function H.Update()
                 H.events[v.Msg] = nil
                 H.events[k] = nil
                 H.Save_Timer()
-
+                
             end -- if(v.Type
 
         end -- if (v.Time

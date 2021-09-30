@@ -119,8 +119,8 @@ function lib.print_all(player, text)
         sc.chat(player, text)
 
     else                                    -- Vanilla print all
-    local lprint = minetest.chat_send_all
-    lprint(lib.color["yellow"] .. player .. ":" .. text)
+        local lprint = minetest.chat_send_all
+        lprint(lib.color["yellow"] .. player .. ":" .. text)
 
     end
 
