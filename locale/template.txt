@@ -13,6 +13,11 @@ There is no Timer with the name =
 
 ### cmd_change.lua ###
 ### cmd_delete.lua ###
+
+No timer stored.=
+
+### cmd_change.lua ###
+### cmd_delete.lua ###
 ### cmd_set.lua ###
 
 You are not an Herald to do this. Missing privileg Herald.=
