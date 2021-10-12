@@ -34,6 +34,6 @@ end -- h[template
 
 h.registered_commands[short] = function(player, parameter)
 
-        sc.registered_commands[cname](player, parameter)
+        h.registered_commands[cname](player, parameter)
 
 end -- h.registered_commands[template_shortcut

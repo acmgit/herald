@@ -22,7 +22,10 @@ H.version = "1.0"
 
 -- Checking all Steps Seconds.
 H.steps = 60
-H.time = os.date("%H:%M")
+H.time = nil
+H.Weekday = nil
+H.Monthday = nil
+H.Month = nil
 
 H.events = {}
 H.helpsystem = {}
@@ -33,11 +36,6 @@ local S
 if(minetest.get_translator ~= nil) then
     S = minetest.get_translator(H.modname)
     H.S = S
-end
-
-H.scm = false -- Smart-Chat-Mode
-if(minetest.get_modpath("smart_chat")) then
-   H.scm = true
 end
 
 dofile(H.modpath .. "/lib.lua")
@@ -74,7 +72,7 @@ minetest.register_chatcommand("her",{
 }) -- minetest.register_chatcommand
 
 function H.Update()
-    H.time = os.date("%H:%M")                             -- Update the Time
+    H.split_date()                                        -- Update the Time
 
     if(H.events == nil) then H.events = {} return end
 
@@ -82,7 +80,7 @@ function H.Update()
         if(v.Time == H.time) then                         -- Fire the Event
             H.print_all("Server"," " .. v.Color .. v.Msg) -- Server is the player
             minetest.log("action", "Timer: " .. k .. " has fired with: " .. v.Msg)
-            
+
             if(v.Typ:lower()) == "o" then                 -- Timer fires only one time
                 H.events[v.Time] = nil
                 H.events[v.Color] = nil
@@ -90,7 +88,7 @@ function H.Update()
                 H.events[v.Msg] = nil
                 H.events[k] = nil
                 H.Save_Timer()
-                
+
             end -- if(v.Type
 
         end -- if (v.Time
@@ -98,6 +96,8 @@ function H.Update()
     end -- for k,v
 
 end -- function Update ()
+
+H.split_date()
 
 local timer = 0
 

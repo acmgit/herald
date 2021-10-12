@@ -114,15 +114,8 @@ function lib.print(player, text)
 end -- function print(
 
 function lib.print_all(player, text)
-    if(lib.scm) then                        -- Smart_Chat is there
-        local sc = smart_chat
-        sc.chat(player, text)
-
-    else                                    -- Vanilla print all
-        local lprint = minetest.chat_send_all
-        lprint(lib.color["yellow"] .. player .. ":" .. text)
-
-    end
+    local lprint_all = minetest.chat_send_all
+    lprint_all(lib.color["yellow"] .. player .. ":" .. text)
 
 end -- function print_all(
 
@@ -152,6 +145,29 @@ function lib.Save_Timer()
 
 end
 
+--[[
+   ****************************************************************
+   *******           Function split_date()                   ******
+   ****************************************************************
+]]--
+
+function lib.split_date()
+    local mydate = os.date("%m %d %w %H %M")
+    local nr = {}
+    local i = 1
+    for dat in string.gmatch(mydate, "[^%s]+") do
+        nr[i] = dat
+        i = i + 1
+
+    end -- for dat in
+
+    lib.time = nr[4] .. ":" .. nr[5]
+    lib.weekday = nr[3]
+    lib.monthday = nr[2]
+    lib.month = nr[1]
+
+end -- function lib.split_date
+
 
 --[[
    ****************************************************************
@@ -161,6 +177,6 @@ end
 
 function lib.show_version()
     print("[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded. \n")
-    minetest.log("ACTION","[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded.")
+    minetest.log("action","[MOD]" .. lib.modname .. " v " .. lib.version .. " loaded.")
 
 end -- lib.show_version

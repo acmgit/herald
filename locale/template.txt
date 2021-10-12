@@ -70,10 +70,41 @@ Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Co
 
 Take care, the Timername exists !!=
 
-### cmd_time.lua ###
+### cmd_status.lua ###
 
-Show's you the current Time of Herald.=
-The current Time is =
+April=
+August=
+Current Day=
+Current Month=
+Current Time=
+Current Weekday=
+December=
+February=
+Friday=
+January=
+July=
+June=
+Mai=
+March=
+Monday=
+Not permanent Timer=
+November=
+October=
+Permanent Timer=
+Saturday=
+September=
+Show's you more Info's about Herald.=
+Status of Herald:=
+Sunday=
+Thursday=
+Timers=
+Tuesday=
+Version=
+Wednesday=
+
+### cmd_template.lua ###
+
+Template Command with Parameter <=
 
 ### init.lua ###
 

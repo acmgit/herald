@@ -70,10 +70,41 @@ Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Co
 
 Take care, the Timername exists !!=Vorsicht, den Timernamen gibts schon.
 
-### cmd_time.lua ###
+### cmd_status.lua ###
 
-Show's you the current Time of Herald.=Zeigt dir die aktuellle Zeit von Herald.
-The current Time is =Die aktuelle Zeit ist 
+April=April
+August=August
+Current Day=Aktueller Tag
+Current Month=Aktuelles Monat
+Current Time=Aktuelle Zeit
+Current Weekday=Aktueller Wochentag
+December=Dezember
+February=Februar
+Friday=Freitag
+January=Jänner
+July=Juli
+June=Juni
+Mai=Mai
+March=März
+Monday=Montag
+Not permanent Timer=Kein fester Timer
+November=November
+October=Oktober
+Permanent Timer=Fester Timer
+Saturday=Samstag
+September=September
+Show's you more Info's about Herald.=Zeigt dir mehr Info über Herald.
+Status of Herald:=Status von Herald:
+Sunday=Sonntag
+Thursday=Donnerstag
+Timers=Timer
+Tuesday=Dienstag
+Version=Version
+Wednesday=Mittwoch
+
+### cmd_template.lua ###
+
+Template Command with Parameter <=Schablonen Kommando mit Parameter<
 
 ### init.lua ###
 
@@ -86,3 +117,9 @@ No Command for =Kein Kommando für
 Try /her help.=Versuche /her help
 Unknown Command=Unbekanntes Kommando
 Unknown Command. No helpsystem available.=Unbekanntes Kommando. Kein Hilfssystem verfügbar.
+
+
+##### not used anymore #####
+
+Show's you the current Time of Herald.=Zeigt dir die aktuellle Zeit von Herald.
+The current Time is =Die aktuelle Zeit ist 
