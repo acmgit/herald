@@ -5,16 +5,13 @@ herald.cmd_help (Enable Help) bool true
 herald.cmd_list (Enable list) bool true
 
 #Command colorlist
-herald.cmd_colorlist (Enable list) bool true
+herald.cmd_colorlist (Enable colorlist) bool true
 
 #Command change
-herald.cmd_change (Enable list) bool true
+herald.cmd_change (Enable change) bool true
 
 #Command set
-herald.cmd_set (Enable list) bool true
+herald.cmd_set (Enable set) bool true
 
 #Command delete
-herald.cmd_delete (Enable list) bool true
-
-#Command change
-herald.cmd_change (Enable list) bool true
+herald.cmd_delete (Enable delete) bool true
