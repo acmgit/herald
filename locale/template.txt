@@ -66,7 +66,7 @@ Lists all stored Timer.=
 <Name> <Time> <Color> <Once> <Message>=
 Missing Timertyp. (Once, Perm)=
 
-Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, true, it fires only one time=
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, o it fires only one time, p it's permanent=
 
 Take care, the Timername exists !!=
 

@@ -11,7 +11,7 @@ h.register_help({
                             Usage = "/her " .. cname ,
                             Description = S("Set's a new Timer with the <Name> at" ..
                                             " <Time> and writes the <Message> in this <Color>." ..
-                                            " <Once> is the Typ of Timer, true, it fires only one time"),
+                                            " <Once> is the Typ of Timer, o it fires only one time, p it's permanent"),
                             Parameter = S("<Name> <Time> <Color> <Once> <Message>"),
                             Shortcut = "/her " .. short,
                         }
@@ -28,8 +28,8 @@ h.registered_commands[cname] = function(player, parameter)
 
     local ename = parameter[2]
     local etime = parameter[3]
-    local etyp = parameter[4]
-    local ecolor = h.color[parameter[5]]
+    local ecolor = h.color[parameter[4]]
+    local etyp = parameter[5]
     local emsg = ""
 
     for i,v in pairs(parameter) do

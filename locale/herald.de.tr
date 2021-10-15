@@ -66,7 +66,7 @@ Lists all stored Timer.=Zeigt alle gespeicherten Timer.
 <Name> <Time> <Color> <Once> <Message>=<Name> <Zeit> <Farbe> <Einzeln> <Nachricht>
 Missing Timertyp. (Once, Perm)=Fehlender Timertyp (o - Einzeln, p - ermanent)
 
-Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, true, it fires only one time=Setzt einen neuen Timer mit dem <Name> um <Zeit> und schreibt die <Nachricht> in dieser <Farbe>. <o - Einzeln> ist der Typ des Timers, ist es wahr, löst es nur einmal aus.
+Set's a new Timer with the <Name> at <Time> and writes the <Message> in this <Color>. <Once> is the Typ of Timer, o it fires only one time, p it's permanent=Setzt einen neuen Timer mit dem <Name> ab <Zeit> und schreibt die <Nachricht> in dieser <Farbe>. <Einzeln> ist der Typ des Timers, o es startet nur ein mal, p ist permanent
 
 Take care, the Timername exists !!=Vorsicht, den Timernamen gibts schon.
 
@@ -117,9 +117,3 @@ No Command for =Kein Kommando für
 Try /her help.=Versuche /her help
 Unknown Command=Unbekanntes Kommando
 Unknown Command. No helpsystem available.=Unbekanntes Kommando. Kein Hilfssystem verfügbar.
-
-
-##### not used anymore #####
-
-Show's you the current Time of Herald.=Zeigt dir die aktuellle Zeit von Herald.
-The current Time is =Die aktuelle Zeit ist 
